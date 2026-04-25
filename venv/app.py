@@ -30,7 +30,6 @@ def save_contact():
             "Date": date
         }
 
-        # If file exists → append
         if os.path.exists(FILE_PATH):
             df = pd.read_excel(FILE_PATH)
             df = pd.concat([df, pd.DataFrame([new_data])], ignore_index=True)
